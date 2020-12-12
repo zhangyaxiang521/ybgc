@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">智慧工程</string>
+    <string name="name">用户名</string>
+    <string name="pass">密码</string>
+    <string name="xingming">姓名</string>
+    <string name="shenfenz">身份证号</string>
+    <string name="login">正在登录...</string>
+    <string name="xjdm">新建断面</string>
+    <string name="xjcl">测量任务</string>
+    <string name="xtsz">系统设置</string>
+    <string name="ybgcxx">隐蔽工程信息</string>
+    <string name="login_dl">登&#160;&#160;&#160;&#160;录</string>
+</resources>

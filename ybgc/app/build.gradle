@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+    defaultConfig {
+        applicationId "mykolin.kolin.com.ybgc"
+        minSdkVersion 17
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v4:27.1.1'
+    compile 'com.android.support:appcompat-v7:27.0.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okio:okio:1.5.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
+    compile 'com.android.support:design:27.+'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.android.support:cardview-v7:27.+'
+    implementation 'com.alibaba:fastjson:1.2.55'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+    //刷新
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'//导入retrofit
+    compile 'com.google.code.gson:gson:2.6.2'//Gson 库
+//下面两个是RxJava 和 RxAndroid
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    compile 'io.reactivex.rxjava2:rxjava:2.x.y'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'//转换器，请求结果转换成Model
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//配合Rxjava 使用
+    compile 'com.github.arcadefire:nice-spinner:1.3.1'
+    compile 'com.yuyh.imgsel:library:1.3.8'
+    //广播
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+}
